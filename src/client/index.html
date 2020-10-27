@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>OCW Curator</title>
+          <link rel="stylesheet" href="./main.css"></link>
+          <link rel="stylesheet" href="./controls.css"></link>
+     </head>
+     <body>
+        <div id="controls">
+            <div id="collapse-view"></div>
+            <div id="settings-toggle"></div>
+        </div>
+
+          <div id="app">
+                <div id="settings" class='hidden'>
+                    <input type="text" id="data-name" placeholder="Course Name">
+                    <input type="text" id="data-icon">
+
+                    <button id="settings-save">Save Settings</button>
+                </div>
+               <h1 id="title">OCW Curator</h1>
+               <div id='subtitle'>
+                   <span id='subtitle-icon'></span>
+                    <span id="subtitle-text"></span>
+               </div>
+               <div id="course-select"></div>
+          </div>
+
+          <div id="menus">
+            <webview
+                id="course-view"
+                webpreferences="javascript=no"
+                src=""
+                allowfullscreen="true"
+            ></webview>
+
+            <div id="edit-course-details" class='hidden'>
+                <input type="text" placeholder='Course Name' id="course-name">
+                <textarea type="text" placeholder='Course Description' id="course-desc"></textarea>
+                <input type="text" placeholder='Course Directory' id="course-dir">
+            </div>
+          </div>
+
+          <script src="./client.js"></script>
+     </body>
+</html>

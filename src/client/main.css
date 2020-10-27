@@ -1,0 +1,147 @@
+html {
+    font-size: 16px;
+    font-family: Roboto;
+    color: #fff;
+}
+
+body {
+    background: #335;
+    margin: 0;
+}
+
+html, body, #app {
+    height: 100%;
+    width: 100%;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: repeat(3, max-content) 1fr;
+    gap: 10px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#title {
+    color: #f3a;
+    font-size: 3em;
+    user-select: none;
+    text-align: center;
+}
+
+#subtitle {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+
+    user-select: none;
+}
+
+#subtitle-icon {
+    font-size: 1.65em;
+}
+
+#subtitle-text {
+    font-size: 1.3em;
+}
+
+#course-select {
+    width: 100%;
+    height: 100%;
+    --grid-size: 200px;
+    --grid-gap: 20px;
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: repeat(auto-fill, minmax(var(--grid-size), 1fr));
+    grid-auto-rows: 120px;
+}
+
+.course-button {
+    transition: background 200ms, color 200ms, transform 200ms;
+    cursor: pointer;
+
+    background: #3cc987;
+    color: #93ffdf;
+    
+    box-sizing: border-box;
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-size: 1.5em;
+
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    user-select: none;
+}
+
+.course-button:hover {
+    background: #44f79d;
+    color: #fff;
+}
+
+.course-button:focus {
+    
+}
+
+#edit-course-details {
+    position: absolute;
+    box-shadow: 0 3px 6px #0005;
+    background: #fff;
+    color: #224;
+    border: 2px solid #33aaff;
+    box-sizing: border-box;
+    border-radius: 7px;
+    
+    display: grid;
+    grid-auto-flow: row;
+    width: minmax(300px, 1fr);
+    gap: 10px;
+    padding: 12px;
+}
+
+#edit-course-details > * {
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#edit-course-details.hidden {
+    display: none;
+}
+
+
+#course-view {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#settings {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10px;
+
+    box-sizing: border-box;
+    padding: 20px;
+    width: minmax(100%, 400px);
+}
+
+#settings > * {
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+}
+
+#settings.hidden {
+    display: none;
+}
